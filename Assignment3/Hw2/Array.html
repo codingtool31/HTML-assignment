@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array =[
+             {name: "javeria",age:27,grade:89},
+             {name: "asma",age:26,grade:69},
+             {name: "laiba",age:17,grade:83},
+             {name: "emman",age:28,grade:56},
+             {name: "rabia",age:23,grade:74},
+             {name: "noor",age:25,grade:90}
+        ]
+        let high_grade = array.filter((value) => {
+  if (value.grade >=85) {
+    return value;
+  }
+});
+ console.log(high_grade)
+
+//remember reduce method works in iteration and gives one value and works in asc order
+ let avg_grade = array.reduce((acc, value)=>{
+
+ return acc+ value.grade;//first adds all student grades
+ },0);//initial value 0
+ let result = avg_grade / array.length;//then divide them by the total length
+  console.log("the averege grade of all students = "+result.toFixed(2));//after point only 2 values
+
+    </script>
+</body>
+</html>

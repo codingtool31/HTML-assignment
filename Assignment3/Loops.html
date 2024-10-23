@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment 3</h1>
+<h3>3. loop structure for checking number is divisble by 3 or 5</h3>
+<script>
+
+    let initialValue = prompt("Enter Initial Value");
+        initialValue = Number(initialValue);
+     let finalValue = prompt("Enter final Value");
+        finalValue = Number(finalValue);
+     let sum = 0;
+        for (let i = initialValue; i <= finalValue; i++)
+   {
+    let result2 = i%5;
+    let result = i%3;
+    if(result == 0 || result2 == 0){
+         sum = sum +i;
+        console.log("i = " + i);
+     }
+    }
+     console.log("sum = " + sum);
+</script>
+</body>
+</html>

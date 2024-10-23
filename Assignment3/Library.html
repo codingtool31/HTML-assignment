@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment 3</h1>
+<h3>4. library system</h3>
+<script>
+    let book = {
+        title: "adventures of tom",
+        author: "Calvin Richard",
+        year:    1989,
+        available: true,
+    }
+   function borrowBook(){
+    if(book.available==true){
+        console.log("Borrowed book details:" );
+        console.log("title = " +book.title );
+         console.log("Author = "+book.author );
+         console.log("year = "+book.year );
+         console.log("Available = "+book.available );
+        book.available =  false;}
+        else{
+            console.log("already borrowed");
+        }
+    }
+   function returnbook(){
+    if(book.available==false){
+        book.available =  true;
+        console.log("Return book details:" );
+        console.log("title = " +book.title );
+         console.log("Author = "+book.author );
+         console.log("year = "+book.year );
+         console.log("Available = "+book.available );}
+         else{
+            console.log("already returned");
+        }
+    }
+    borrowBook();
+    borrowBook();
+     returnbook();
+     returnbook();
+</script>
+</body>
+</html>
