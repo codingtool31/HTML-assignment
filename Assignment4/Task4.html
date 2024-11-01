@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Toggle Example</title>
+    <style>
+        /* body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        } */
+        .light-theme {
+            background-color: #ecbcbc;
+            color: #000000;
+        }
+        .dark-theme {
+            background-color: #f72b2b;
+            color: #ffffff;
+        }
+        /* .container {
+            text-align: center;
+            padding: 50px;
+        } */
+    </style>
+</head>
+<body class="light-theme">
+    <div class="container">
+        <h1>Task 4 . </h1>
+        <button id="theme-toggle">Toggle Theme</button>
+    </div>
+    <script>
+        const themeToggleButton = document.getElementById('theme-toggle');
+
+        function setTheme(theme) {
+            document.body.className = theme;
+            localStorage.setItem('theme', theme);
+        }
+
+        function toggleTheme() {
+            const currentTheme = localStorage.getItem('theme') || 'light-theme';
+            const newTheme = currentTheme === 'light-theme' ? 'dark-theme' : 'light-theme';
+            setTheme(newTheme);
+        }
+
+        window.onload = () => {
+            const savedTheme = localStorage.getItem('theme') || 'light-theme';
+            setTheme(savedTheme);
+        };
+
+        themeToggleButton.addEventListener('click', toggleTheme);
+    </script>
+</body>
+</html>

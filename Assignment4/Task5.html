@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Checker</title>
+</head>
+<body>
+    <h2>Task 5</h2>
+    <button id="status_btn">Check Status</button>
+    
+    <script>
+        const statusButton = document.getElementById("status_btn");
+
+        // Function to simulate fetching status
+        function fetchStatus() {
+            return new Promise((resolve, reject) => {
+                const seconds = 3000; // 3 seconds delay
+                setTimeout(() => {
+                    if (seconds > 1500) {
+                        resolve("Success");
+                    } else {
+                        reject("Failure");
+                    }
+                }, seconds);
+            });
+        }
+
+        statusButton.onclick = () => {
+            fetchStatus()
+                .then(message => {
+                    console.log(message);
+                    alert(message); // Show success message
+                })
+                .catch(error => {
+                    alert(error); // Show error message
+                })
+                .finally(() => {
+                    alert("Operation completed"); // Show completion message
+                });
+        };
+    </script>
+</body>
+</html>

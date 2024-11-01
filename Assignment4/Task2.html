@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Paragraph Example</title>
+    <style>
+        #flip {
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+<h2>task 2 . </h2>
+    <button id="toggle_Button">Toggle Text</button>
+    <p id="flip"> Event Listeners:
+        Task: Create a basic toggle button to hide and show a paragraph.
+        Details:
+        Add a static paragraph of text and a button labeled "Toggle Text".
+        When the button is clicked, the paragraph should either hide or show, depending on its current state.
+        Key Concepts: addEventListener(), DOM element visibility using style.display or classList.toggle().
+    </p>
+
+    <script>
+        const toggleButton = document.getElementById('toggle_Button');
+        const myParagraph = document.getElementById('flip');
+
+        toggle_Button.addEventListener('click', () => {
+          
+            if (myParagraph.style.display === 'none' || myParagraph.style.display === '') {
+                myParagraph.style.display = 'block'; 
+            } else {
+                myParagraph.style.display = 'none'; 
+            }
+        });
+    </script>
+
+</body>
+</html>
