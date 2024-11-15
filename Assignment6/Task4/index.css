@@ -1,0 +1,35 @@
+
+
+
+a:link {
+    color: blue; 
+    text-decoration: none; 
+}
+a:visited {
+    color:purple;
+   }
+   
+a:active {
+    color: red; 
+}
+
+a {
+    text-decoration: none;
+    font-size: 36px;
+    padding: 5px;
+    transition: color 0.1s ease;
+    cursor: pointer;
+    color: blue;
+}
+
+.sections{
+    margin: 3%;
+    padding: 5%; 
+     
+}
+section{
+    margin: 20%;
+    background-color: bisque;
+    border: 1px solid black;
+    text-align: center;
+}

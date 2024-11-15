@@ -1,0 +1,12 @@
+.para{
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 2%;
+}
+.para::first-letter{
+    color: crimson;
+    font-size: 85px;
+}
+.para::first-line{
+    font-weight:900;
+}

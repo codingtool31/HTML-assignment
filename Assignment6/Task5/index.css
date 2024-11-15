@@ -1,0 +1,41 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+.form-container{
+    padding: 2px;
+   
+   display:flex;
+   flex-direction: column;
+    
+}
+#input-field{
+    background-color: bisque;
+    margin: 2%;
+    color: black;
+    transition: all 0.4 ease;
+    width: 270px;
+    border: 2px solid papayawhip;
+    height: 50px;
+    
+}
+#input-field:focus{
+  
+    outline: none;
+   box-shadow: 5px 5px 5px 5px  rgb(211, 93, 113);
+  border-color: blue;
+}
+#focus-btn{
+    background-color: rgb(236, 138, 18);
+    color: black;
+    margin: 2%;
+    transition: all 0.4 ease;
+    width: 270px;
+    border: 2px solid papayawhip;
+    height: 50px;
+}
+#focus-btn:focus{
+    outline: none;
+    box-shadow: 5px 5px 5px 5px  rgb(211, 93, 113);
+   border-color: blue;
+}

@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 5%;
+}
+h1{
+    background-color: beige;
+    color: black;
+margin-bottom: 10px;
+margin-right: 5%;
+}
+h3{
+    background-color: blanchedalmond;
+    color: black;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 5%;
+}
+
+.ntm{
+   margin-top:2%;
+   margin-left: 2%;
+   cursor: pointer;
+   font-size: x-large;
+   padding:5px;
+   background-color: blanchedalmond;
+block-size: 120px;
+   transition: background-color 10s ease, transform 2s ease;
+}
+.ntm:active{
+    background-color: black;
+    color: bisque;
+    transform: scale(0.50);
+}
