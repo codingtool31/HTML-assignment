@@ -1,0 +1,39 @@
+.hidden{
+    background-color: rgb(61, 46, 46);
+    width:300px;
+    height: 200px;
+    opacity: 0;
+    transition: opacity 0.5 ease;
+}
+.btn{
+    width:200px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: blanchedalmond;
+font-weight: bolder;
+}
+.btn:hover{
+    animation: bounce 5s ease-out 2s 5 left;
+}
+.btn:hover+.hidden{
+    opacity:1;
+    animation: fadeIn 6s ease-in 1s ;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+   
+    100% {
+        opacity: 1;
+    }
+}

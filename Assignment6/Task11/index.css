@@ -1,0 +1,55 @@
+
+.card {
+    width: 300px;
+    height: 300px;
+    margin: 5%;
+    background-color: #e57272;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 8px 8px 8px rgba(15, 8, 8, 0.1);
+    padding: 20px;
+   
+  }
+  
+  
+  .card-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #d22329;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
+ 
+  .card-button:hover {
+    background-color: #f3a0e6;
+    color: black;
+  }
+  
+ 
+  .card-button:active {
+    background-color: #a2d44b;
+   
+  }
+  
+  
+  @media (max-width: 650px) {
+    .card {
+      width: 90%; 
+      height: 300px; 
+    }
+  }
+  
+  
+  @media (min-width: 700px) {
+    .card {
+      width: 350px;
+      height: 370px;
+    }
+  }
+  

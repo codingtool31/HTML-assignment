@@ -1,0 +1,26 @@
+.div-container{
+    width:700px;
+    height: 200px;
+    background-color: bisque;
+    color: black;
+    margin: 10%;
+    padding: 5%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    position: relative;
+}
+.div-container::before{
+   
+    
+    content: "❤️";
+    top: 20%;
+    left: 20%;
+position: absolute;
+
+}
+.div-container::after{
+    content:"♥ ";
+   right: 20%;
+position: absolute;
+}

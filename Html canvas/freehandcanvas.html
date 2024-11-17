@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+   background: #e74c3c;
+}
+
+#canvas {
+   position: relative;
+   left: calc(50% - 390px);
+   top: 90px;
+   border: 1px dotted black;
+   cursor: crosshair;
+   background: #060809;
+}
+</style>
+<body>
+    <h2>Draw shapes using mouse:</h2>
+    <canvas id="canvas"></canvas>
+    <script>
+      var canvas;
+var context;
+
+window.onload = function() {
+   canvas = document.getElementById('canvas');
+   context = canvas.getContext('2d');
+   canvas.width = 780;
+   canvas.height = 490;
+   context.strokeStyle = "white";
+   context.lineWidth = 2;
+   
+   canvas.onmousedown = startDrawing;
+   canvas.onmouseup = stopDrawing;
+   canvas.onmousemove = draw;
+   
+   function startDrawing(e) {
+      isDrawing = true;
+      context.beginPath();
+      context.moveTo(e.pageX - canvas.offsetLeft, e.pageY - canvas.offsetTop);
+   }
+   
+   function draw(e) {
+      if (isDrawing == true) {
+         var x = e.pageX - canvas.offsetLeft;
+         var y = e.pageY - canvas.offsetTop;
+      
+         context.lineTo(x, y);
+         context.stroke();
+      }
+   }
+   
+   function stopDrawing() {
+      isDrawing = false;
+   }
+   
+   /*var coord = document.getElementById("coord");
+   canvas.onmousemove = function(e) {
+      coord.value = e.pageX+" "+e.pageY+" / "+(e.pageX-canvas.offsetLeft)+" "+(e.pageY-canvas.offsetTop);
+   }*/
+}
+    </script>
+</body>
+</html>
