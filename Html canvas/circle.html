@@ -12,9 +12,16 @@
     <script>
         var c=document.getElementById("myCanvas");
         var ctx= c.getContext("2d");
-        ctx.beginPath();
-        ctx.arc(95,50,40,0,2 * Math.PI);
-        ctx.stroke()
+        //first method
+        // ctx.beginPath();
+        // ctx.arc(95,50,40,0,2 * Math.PI);
+        // ctx.stroke();
+
+
+        //second method
+        ctx.moveTo(0,0);
+        ctx.arc(30, 30, 30, 0,2 * Math.PI);
+        ctx.stroke();
     </script>
 </body>
 </html>
